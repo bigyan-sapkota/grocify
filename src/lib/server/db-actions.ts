@@ -1,7 +1,13 @@
 import { desc, eq } from "drizzle-orm";
-import { GroceryItem } from "../../../types";
 import { db } from "./db/client";
 import { groceryItems } from "./db/schema";
+
+export type CreateGroceryItemInput = {
+  name: string;
+  category: string;
+  quantity: number;
+  priority: string;
+};
 
 export const listGroceryItems = async () => {
   const rows = await db
@@ -12,7 +18,7 @@ export const listGroceryItems = async () => {
   return rows;
 };
 
-export const createGroceryItem = async (input: GroceryItem) => {
+export const createGroceryItem = async (input: CreateGroceryItemInput) => {
   const rows = await db
     .insert(groceryItems)
     .values({
