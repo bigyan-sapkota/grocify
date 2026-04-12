@@ -47,3 +47,4 @@ app-example
 .DS_Store
 .AppleDouble
 .LSOverride
+.env.local
