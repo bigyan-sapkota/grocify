@@ -1,7 +1,7 @@
 export type GroceryItemPriority = "low" | "medium" | "high";
 export type GroceryItemCategory =
   | "Produce"
-  | "Diary"
+  | "Dairy"
   | "Bakery"
   | "Pantry"
   | "Snacks";
